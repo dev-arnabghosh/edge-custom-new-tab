@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+        />
+        <title>Custom New Tab Settings</title>
+
+        <style>
+            body {
+                width: 320px;
+                padding: 16px;
+                margin: 0;
+                box-sizing: border-box;
+                font-family: Arial, sans-serif;
+                color: #1f2937;
+            }
+
+            h2 {
+                font-size: 19px;
+                margin-top: 0;
+            }
+
+            label {
+                display: block;
+                margin-bottom: 6px;
+                font-weight: 600;
+            }
+
+            input {
+                box-sizing: border-box;
+                width: 100%;
+                padding: 10px;
+                border: 1px solid #cbd5e1;
+                border-radius: 6px;
+            }
+
+            button {
+                width: 100%;
+                padding: 10px;
+                margin-top: 10px;
+                border: none;
+                border-radius: 6px;
+                background: #2563eb;
+                color: white;
+                cursor: pointer;
+            }
+
+            button.secondary {
+                background: #e2e8f0;
+                color: #1f2937;
+            }
+
+            .hint {
+                font-size: 12px;
+                color: #64748b;
+                line-height: 1.5;
+            }
+
+            #status {
+                font-size: 12px;
+                overflow-wrap: anywhere;
+            }
+
+            .author-footer {
+                margin-top: 20px;
+                padding-top: 12px;
+                border-top: 1px solid #e2e8f0;
+                text-align: center;
+                font-size: 12px;
+                color: #64748b;
+            }
+
+            .author-footer a {
+                color: #2563eb;
+                text-decoration: none;
+            }
+
+            .author-footer a:hover {
+                text-decoration: underline;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h2>Custom New Tab</h2>
+
+        <form id="settingsForm">
+            <label for="url">Custom website URL</label>
+
+            <input
+                id="url"
+                type="url"
+                placeholder="https://example.com"
+            />
+
+            <p class="hint">
+                Save a custom URL to override config.json. Leave the field empty and save to use the
+                configured default.
+            </p>
+
+            <button type="submit">Save URL</button>
+        </form>
+
+        <button
+            id="open"
+            class="secondary"
+            type="button"
+        >
+            Open Effective Website
+        </button>
+
+        <button
+            id="reload"
+            class="secondary"
+            type="button"
+        >
+            Reload Current Tab
+        </button>
+
+        <button
+            id="reset"
+            class="secondary"
+            type="button"
+        >
+            Restore Configured Default
+        </button>
+
+        <p
+            id="status"
+            role="status"
+            aria-live="polite"
+        ></p>
+
+        <script src="settings.js"></script>
+    </body>
+    <footer class="author-footer">
+        Developed with ❤️ by
+        <a
+            href="https://arnabghosh.dev/"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            Arnab Ghosh
+        </a>
+    </footer>
+</html>

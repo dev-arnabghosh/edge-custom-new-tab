@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+        />
+        <title>Configure Custom New Tab</title>
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="icons/icon32.png"
+        />
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                margin: 0;
+                min-height: 100vh;
+                display: grid;
+                place-items: center;
+                padding: 24px;
+                font-family: Arial, sans-serif;
+                background: #f8fafc;
+                color: #1e293b;
+            }
+
+            main {
+                width: 100%;
+                max-width: 460px;
+                padding: 32px;
+                background: white;
+                border: 1px solid #e2e8f0;
+                border-radius: 16px;
+                box-shadow: 0 12px 35px #0f172a0d;
+            }
+
+            h1 {
+                font-size: 24px;
+                margin-top: 0;
+            }
+
+            p {
+                color: #64748b;
+                line-height: 1.6;
+            }
+
+            label {
+                display: block;
+                margin: 22px 0 8px;
+                font-weight: 600;
+            }
+
+            input {
+                width: 100%;
+                padding: 12px;
+                border: 1px solid #cbd5e1;
+                border-radius: 8px;
+                font-size: 15px;
+            }
+
+            button {
+                width: 100%;
+                padding: 12px;
+                margin-top: 12px;
+                border: none;
+                border-radius: 8px;
+                background: #2563eb;
+                color: white;
+                font-size: 15px;
+                cursor: pointer;
+            }
+
+            button.secondary {
+                background: #e2e8f0;
+                color: #1e293b;
+            }
+
+            #status {
+                font-size: 13px;
+                overflow-wrap: anywhere;
+            }
+
+            footer {
+                position: fixed;
+                bottom: 16px;
+                left: 0;
+                width: 100%;
+                text-align: center;
+                font-size: 13px;
+                color: #888;
+            }
+
+            footer a {
+                color: #2563eb;;
+                text-decoration: none;
+            }
+
+            footer a:hover {
+                text-decoration: underline;
+            }
+        </style>
+    </head>
+
+    <body>
+        <main>
+            <h1>Welcome to Custom New Tab</h1>
+
+            <p>
+                Choose the website you want to open whenever you create a new tab in Microsoft Edge.
+            </p>
+
+            <form id="setupForm">
+                <label for="url">Website URL</label>
+
+                <input
+                    id="url"
+                    type="url"
+                    placeholder="https://example.com"
+                    autocomplete="url"
+                />
+
+                <button type="submit">Save and Continue</button>
+            </form>
+
+            <button
+                id="useDefault"
+                class="secondary"
+                type="button"
+            >
+                Use Default Website
+            </button>
+
+            <p
+                id="status"
+                role="status"
+                aria-live="polite"
+            ></p>
+        </main>
+
+        <script src="newtab.js"></script>
+    </body>
+    <footer>
+        Developed with ❤️ by
+        <a
+            href="https://arnabghosh.dev/"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            Arnab Ghosh
+        </a>
+    </footer>
+</html>
